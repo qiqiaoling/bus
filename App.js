@@ -6,11 +6,11 @@
 
 import React, { Component } from 'react';
 import {
-  Platform,
   StyleSheet,
   Text,
   View
 } from 'react-native';
+
 import TabBar from './TabBar.js'
 
 export default class App extends Component {
@@ -18,10 +18,15 @@ export default class App extends Component {
     return (
       <View style={styles.container}>
         <TabBar style={styles.container}></TabBar>
+
       </View>
     );
   }
 }
+
+
+
+
 
 const styles = StyleSheet.create({
   container: {
