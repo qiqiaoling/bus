@@ -1,19 +1,36 @@
 import React, { Component } from 'react';
 import {
-  StyleSheet,
+  StyleSheet, 
   Text,
   View
   } from 'react-native';
+import {StackNavigator} from 'react-navigation';
 
+class HomeScreen extends React.Component {
+    static navigationOptions = {
+        title: '作业',
+    };
 
-class Homework extends Component{
-  render(){
-    return(
-    	<View>
-    		<Text>Homework</Text>
-    	</View>
-    );
-  }
+    render() {
+      return(
+        <View style={styles.container}>
+          <Text>Homework这是内容部分</Text>
+        </View>
+      );
+    }
 }
+
+const Homework = StackNavigator({
+    Home: {screen: HomeScreen},
+});
+
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: 'white'
+  }
+})
+
 
 module.exports = Homework;
